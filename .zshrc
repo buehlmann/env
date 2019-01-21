@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH="$PATH:`yarn global bin`:/usr/lib/go-1.10/bin:/opt/minishift-1.29.0-linux-amd64"
+export PATH="$PATH:`yarn global bin`:/usr/lib/go-1.10/bin:/opt/minishift-1.29.0-linux-amd64:/opt/chromium:/opt/idea-IU-183.5153.38/bin:$HOME/bin:$HOME/.local/bin"
 export GOPATH=~/gocode
 export CONFLUENT_HOME=/opt/confluent-5.0.0/
 
@@ -94,3 +94,11 @@ source $ZSH/oh-my-zsh.sh
 
 # manually added
 fpath=(~/.zsh/completion $fpath)
+
+typeset -U fpath  # Optinal for oh-my-zsh users
+fpath=(~/.zsh/oc $fpath)
+autoload -U compinit
+compinit -i
+
+# configure oc client env 
+eval $(minishift oc-env)
