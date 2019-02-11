@@ -102,3 +102,7 @@ compinit -i
 
 # configure oc client env 
 eval $(minishift oc-env)
+
+# set zsh history size
+export HISTSIZE=999999999
+export SAVEHIST=$HISTSIZE
