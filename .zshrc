@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH="$PATH:`yarn global bin`:/usr/lib/go-1.10/bin:/opt/minishift-1.29.0-linux-amd64:/opt/chromium:/opt/idea-IU-183.5153.38/bin:$HOME/bin:$HOME/.local/bin"
+export PATH="/opt/jdk-11.0.2/bin:$PATH:`yarn global bin`:/usr/lib/go-1.10/bin:/opt/minishift-1.29.0-linux-amd64:/opt/chromium:/opt/idea-IU-192.6262.58/bin:$HOME/bin:$HOME/.local/bin"
 export GOPATH=~/gocode
 export CONFLUENT_HOME=/opt/confluent-5.0.0/
 
@@ -101,7 +101,7 @@ autoload -U compinit
 compinit -i
 
 # configure oc client env 
-eval $(minishift oc-env)
+#eval $(minishift oc-env)
 
 # set zsh history size
 export HISTSIZE=999999999
